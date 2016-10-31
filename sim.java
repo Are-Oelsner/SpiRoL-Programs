@@ -53,7 +53,7 @@ public class sim {
 			StdDraw.show();
 			StdDraw.pause(33);
 			StdDraw.clear();
-			swit
+
  		
 				
 

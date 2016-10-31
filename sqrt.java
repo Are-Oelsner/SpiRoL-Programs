@@ -1,5 +1,5 @@
 //my first attempt
-public class Are {
+public class sqrt {
 	public static double sqrt(double c) {
 		if (c < 0) return Double.NaN;
 		double err = 1e-15;

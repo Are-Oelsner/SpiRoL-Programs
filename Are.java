@@ -1,13 +1,13 @@
 //my first Library
 import javax.swing.JFrame;
 import javax.swing.JButton;
-import java.awt.FlowLayout;
+import java.awt.FlowLayout; 
 public class Are {
 	/*My Java Methods Library
 	 * sqrt
 	 * factorial
 	 * abs
-	 * setCanvasSize
+	 * randInt
 	 */
 	public static double sqrt(double c) {
 		if (c < 0) return Double.NaN;
@@ -26,9 +26,49 @@ public class Are {
 			x = -x;
 		return x;
 	}
-	public static void setCanvasSize(double x, double y) {
-		new window() .setVisible(true);
-		setSize
+	public static long randInt(long a, long b) {
+		return (long)(Math.random() * (b - a + 1)) + a;
+	}
+	public static double minArray(double[] array) {
+		double min = Double.POSITIVE_INFINITY;
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] < min)
+				min = array[i];
+		}
+	}	
+	public static void PrintMatrix(int[][] mat) {
+		for(int i = 0; i < mat.length; i++) {
+			for(int j = 0; j < mat[i].length; j++) {
+				System.out.print(mat[i][j] + "  ");
+			}
+			System.out.println();
+		}
+	}
+	//My Fibonacci Program
+public class Fibonacci {
+	public static void Fibonacci(int N) {
+		double[] Fibonacci = new double[N];
+		Fibonacci[0] = 0;
+		Fibonacci[1] = 1;
+		for(int i = 2; i < N; i++) {
+			Fibonacci[i] = Fibonacci[i-1] + Fibonacci[i-2];
+		}
+		return Fibonacci[N-1];
+	}
+}
+	
+	
+	public static void main(String[] args) {
+		System.out.printf("My Java Methods Library\nFunctions:\n\tsqrt\n\tfactorial\n\tabs\n\trandInt\n\tminArray");
+	}
+//		for (int i = 0; i < 100; i++) {
+//			System.out.println(randInt(i, 110));
+//		}
+//	}
+
+//	public static void setCanvasSize(double x, double y) {
+//		new window() .setVisible(true);
+//		setSize
 	
 	//public static double Vector(double x1, double x2, double y1, double y2) {
 	//	double diff = x1 - x2
